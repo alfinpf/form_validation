@@ -17,10 +17,10 @@ function formSubmit(e){
         return false;
 
       
-     } else 
+     } else{
         userFullNameError.innerHTML = "";
         userFullNameError.style.display = 'none';
-    
+     }
         
     if (userEmail == null || userEmail == ''){
 
@@ -28,10 +28,10 @@ function formSubmit(e){
         userEmailError.innerHTML = "Please enter your email-ID to continue";
         userEmailError.style.display = 'block';
         return false;
-    } else 
+    }  else{ 
         userEmailError.innerHTML = "";
         userEmailError.style.display = 'none';
-
+    }
 
     if (userPassword == null || userPassword == '' || userPassword.length < 8 || userPassword.length > 16 ){
 
@@ -39,10 +39,10 @@ function formSubmit(e){
         userPasswordError.innerHTML = "Please enter your password (8 to 16 characters)";
         userPasswordError.style.display = 'block';
         return false;
-    } else 
+    }  else{ 
         userPasswordError.innerHTML = "";
         userPasswordError.style.display = 'none';
-
+    }
 
     if (userAddress == null || userAddress == '' || userAddress.length < 15 || userAddress.length > 50 ){
 
@@ -50,10 +50,10 @@ function formSubmit(e){
         userAddressError.innerHTML = "Please enter your full address (15-50 characters are allowed)";
         userAddressError.style.display = 'block';
         return false;
-    } else 
+    }  else{ 
         userAddressError.innerHTML = "";
         userAddressError.style.display = 'none';  
-
+    }
 
     console.log("Full Name:",userFullName);
     console.log("Email ID:",userEmail);
