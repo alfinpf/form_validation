@@ -59,6 +59,6 @@ function formSubmit(e){
     console.log("Email ID:",userEmail);
     console.log("Password:",userPassword);
     console.log("Address:",userAddress);
-    alert("Details submitted successfully !")
+    if(!alert("Details submitted successfully !")){window.location.reload();}
 }
 
