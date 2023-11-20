@@ -16,30 +16,43 @@ function formSubmit(e){
         userFullNameError.style.display = 'block';
         return false;
 
-    }     
+      
+     } else 
+        userFullNameError.innerHTML = "";
+        userFullNameError.style.display = 'none';
+    
+        
     if (userEmail == null || userEmail == ''){
 
         let userEmailError = document.getElementById("userEmailError");
-        userEmailError.innerHTML = "Please enter your email-ID";
+        userEmailError.innerHTML = "Please enter your email-ID to continue";
         userEmailError.style.display = 'block';
         return false;
-    }
+    } else 
+        userEmailError.innerHTML = "";
+        userEmailError.style.display = 'none';
+
+
     if (userPassword == null || userPassword == '' || userPassword.length < 8 || userPassword.length > 16 ){
 
         let userPasswordError = document.getElementById("userPasswordError");
-        userPasswordError.innerHTML = "Please enter your password in 8 to 16 characters";
+        userPasswordError.innerHTML = "Please enter your password (8 to 16 characters)";
         userPasswordError.style.display = 'block';
         return false;
-    }
+    } else 
+        userPasswordError.innerHTML = "";
+        userPasswordError.style.display = 'none';
+
+
     if (userAddress == null || userAddress == '' || userAddress.length < 15 || userAddress.length > 50 ){
 
         let userAddressError = document.getElementById("userAddressError");
-        userAddressError.innerHTML = "Please enter your full address";
+        userAddressError.innerHTML = "Please enter your full address (15-50 characters are allowed)";
         userAddressError.style.display = 'block';
         return false;
-    }
-
-   
+    } else 
+        userAddressError.innerHTML = "";
+        userAddressError.style.display = 'none';  
 
 
     console.log("Full Name:",userFullName);
